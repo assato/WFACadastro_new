@@ -90,7 +90,7 @@ namespace WindowsFormsApplication3
             try
             {
                 var conn = new SqlConnection();
-                conn.ConnectionString = @"Server=ERPPC02\SQLEXPRESS; DataBase=TESTEPC02; Trusted_Connection=Yes;";
+                conn.ConnectionString = @"Server=ERPPC02\SQLEXPRESS; DataBase=TESTEPC02; User ID= erp; Password=erp@123; Trusted_Connection=Yes;";
                 conn.Open();
                     string sNome = textBox1.Text;
                     SqlCommand command = new SqlCommand("DELETE FROM TESTE02 where nome =('" + sNome + "')", conn);
