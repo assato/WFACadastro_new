@@ -54,6 +54,10 @@ namespace WindowsFormsApplication3
                     SqlCommand command = new SqlCommand("INSERT INTO TESTE02(Codigo, Nome, Descricao) VALUES(" + sCpf + ",'" + sNome + "','" + sDescr + "')", conn);
                     SqlDataReader reader = command.ExecuteReader();
                 conn.Close();
+                //DataTable dt = new DataTable();
+                //BindingSource bs = new BindingSource();
+                //bs.DataSource = dt;
+                //dataGridView1.DataSource = bs;
                 MessageBox.Show("Registro inserido com sucesso");
             }
                 catch (Exception ex)
