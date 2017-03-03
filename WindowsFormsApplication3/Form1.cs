@@ -54,6 +54,10 @@ namespace WindowsFormsApplication3
                     SqlCommand command = new SqlCommand("INSERT INTO TESTE02(Codigo, Nome, Descricao) VALUES(" + sCpf + ",'" + sNome + "','" + sDescr + "')", conn);
                     SqlDataReader reader = command.ExecuteReader();
                 conn.Close();
+                //DataTable dt = new DataTable();
+                //BindingSource bs = new BindingSource();
+                //bs.DataSource = dt;
+                //dataGridView1.DataSource = bs;
                 MessageBox.Show("Registro inserido com sucesso");
                 //tESTE02TableAdapter.Dispose();
                 this.tESTE02TableAdapter.Fill(this.tESTEPC02DataSet.TESTE02);
@@ -88,7 +92,7 @@ namespace WindowsFormsApplication3
             try
             {
                 var conn = new SqlConnection();
-                conn.ConnectionString = @"Server=ERPPC02\SQLEXPRESS; DataBase=TESTEPC02; Trusted_Connection=Yes;";
+                conn.ConnectionString = @"Server=ERPPC02\SQLEXPRESS; DataBase=TESTEPC02; User ID= erp; Password=erp@123; Trusted_Connection=Yes;";
                 conn.Open();
                     string sNome = textBox1.Text;
                     SqlCommand command = new SqlCommand("DELETE FROM TESTE02 where nome =('" + sNome + "')", conn);
