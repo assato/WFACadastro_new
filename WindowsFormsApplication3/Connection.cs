@@ -11,9 +11,9 @@ namespace WindowsFormsApplication3
     {
         private static void OpenSqlConnection()
         {
-            var conn = new SqlConnection();
-            conn.ConnectionString = @"Server=TESTEPC02\SQLEXPRESS;" + "DataBase=TESTE02;" + @"User Id = ERPPC02\isabela";
-            conn.Open();
+            //var conn = new SqlConnection();
+            //conn.ConnectionString = @"Server=TESTEPC02\SQLEXPRESS;" + "DataBase=TESTE02;" + @"User Id = erp";
+            // conn.Open();
         }
     }
 }

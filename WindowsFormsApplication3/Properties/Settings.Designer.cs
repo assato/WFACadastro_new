@@ -26,8 +26,7 @@ namespace WindowsFormsApplication3.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ERPPC02\\SQLEXPRESS;Initial Catalog=TESTEPC02;Integrated Security=True" +
-            "")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"Data Source=ERPPC02\SQLEXPRESS;Initial Catalog=TESTEPC02;User ID=erp;Password=erp@123")]
         public string TESTEPC02ConnectionString {
             get {
                 return ((string)(this["TESTEPC02ConnectionString"]));

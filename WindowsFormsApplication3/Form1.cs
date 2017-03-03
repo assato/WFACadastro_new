@@ -22,7 +22,7 @@ namespace WindowsFormsApplication3
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'tESTEPC02DataSet.TESTE02' table. You can move, or remove it, as needed.
-            this.tESTE02TableAdapter.Fill(this.tESTEPC02DataSet.TESTE02);
+          //  this.tESTE02TableAdapter.Fill(this.tESTEPC02DataSet.TESTE02);
 
         }
 
@@ -46,7 +46,7 @@ namespace WindowsFormsApplication3
                 try
                 {
                 var conn = new SqlConnection();
-                conn.ConnectionString = @"Server=ERPPC02\SQLEXPRESS; DataBase=TESTEPC02; Trusted_Connection=Yes;";
+                conn.ConnectionString = @"Server=ERPPC02\SQLEXPRESS; DataBase=TESTEPC02; Trusted_Connection=No;User Id=erp;Password=erp@123;";
                 conn.Open();
                     string sNome = textBox1.Text;
                     string sCpf = textBox2.Text;
@@ -55,6 +55,8 @@ namespace WindowsFormsApplication3
                     SqlDataReader reader = command.ExecuteReader();
                 conn.Close();
                 MessageBox.Show("Registro inserido com sucesso");
+                //tESTE02TableAdapter.Dispose();
+                this.tESTE02TableAdapter.Fill(this.tESTEPC02DataSet.TESTE02);
             }
                 catch (Exception ex)
                 {
